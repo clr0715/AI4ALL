@@ -3,6 +3,8 @@
 強者用 PyTorch：實作史上最經典 AI 範例
 深智數位 2020-01-20
 https://www.tenlong.com.tw/products/9789865501129?list_name=srh
+
+https://github.com/swarmapytorch/book_DeepLearning_in_PyTorch_Source
 ```
 ```
 全書重點包括：
