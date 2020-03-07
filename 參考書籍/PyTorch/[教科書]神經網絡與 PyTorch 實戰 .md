@@ -5,6 +5,8 @@
 機械工業
 2018-08-14
 
+https://www.tenlong.com.tw/products/9787111605775?list_name=srh
+
 https://github.com/ZhiqingXiao/pytorch-book
 ```
 
