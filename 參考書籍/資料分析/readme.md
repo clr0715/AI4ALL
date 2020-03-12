@@ -15,10 +15,12 @@ https://matplotlib.org/
 Python 資料分析, 2/e (Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2/e)
 Wes McKinney 張靜雯
 歐萊禮2018-10-03
+https://github.com/wesm/pydata-book
 ```
 
 ```
 Pandas 資料分析實戰：使用 Python 進行高效能資料處理及分析 (Learning pandas : High-performance data manipulation and analysis in Python, 2/e)
 Michael Heydt 陳建宏 譯
 博碩文化2019-08-22
+https://github.com/PacktPublishing/Learning-Pandas-Second-Edition
 ```
