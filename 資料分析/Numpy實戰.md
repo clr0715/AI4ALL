@@ -42,6 +42,22 @@ import torch
 print("PyTorch version: %s" %torch.__version__)
 print("2020年3月PyTorch version最新版本 是1.4 請參閱https://pytorch.org/")
 ```
+
+### 切換不同版本的Tensorflow
+```
+Google Colab預設使用版本:1.15.0[20200314]
+import tensorflow as tf
+print("tensorflow version: %s" % tf.__version__)
+```
+```
+新開一個Notebook
+
+%tensorflow_version 2.x
+import tensorflow as tf
+print("tensorflow version: %s" % tf.__version__)
+
+Google Colab使用版本:2.1.0[20200314]
+```
 ## NUMPY
 
 ### NUMPY ndarray(N-Dimensional Arrays)
