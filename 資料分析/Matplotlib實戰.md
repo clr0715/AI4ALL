@@ -1,20 +1,20 @@
-# Data Visualization資料視覺化
+# 1.Data Visualization資料視覺化
 ```
 藉助於圖形化手段，
 清晰有效地傳達與溝通訊息
 
 https://zh.wikipedia.org/wiki/資料視覺化
 ```
-# 資料視覺化の套件
+# 2.資料視覺化の套件
 ```
-Matplotlib(本課程使用)
+Matp2lotlib(本課程使用)
 Seaborn
 Ggplot
 Bokeh
 Pyga
 Plotly
 ```
-# Google Colab上的範利
+# 3.Google Colab上的範利
 ```
 Charting in Colaboratory
 https://colab.research.google.com/notebooks/charts.ipynb
@@ -37,7 +37,7 @@ plt.legend()
 plt.show()
 ```
 
-# MATPLOTLIB
+# 4.MATPLOTLIB
 ```
 官方網址 https://matplotlib.org/
 
@@ -45,7 +45,7 @@ plt.show()
 
 學習指南(Tutorials) https://matplotlib.org/tutorials/index.html
 ```
-## MATPLOTLIB範例一
+# 4.1.MATPLOTLIB範例一
 ```
 import numpy as np
 import pylab as pl
@@ -116,8 +116,7 @@ plt.xlabel('time (s)')
 plt.ylabel('volts (mV)')
 plt.show()
 ```
-
-### 基本統計圖形: 散佈圖 (Scatter plot)  
+# 4.2.基本統計圖形: 散佈圖 (Scatter plot)  
 ```
 用途:看看資料有何關係??
 ```
@@ -129,8 +128,7 @@ https://en.wikipedia.org/wiki/Scatter_plot
 數據顯示為點的集合，每個點具有確定水平軸上位置的一個變量的值和確定垂直軸上位置的另一個變量的值。
 ```
 
-
-### 散佈圖 (Scatter plot)範例一
+# 範例練習二: 散佈圖 (Scatter plot)範例一
 ```
 import numpy as np
 import pylab as pl
@@ -143,7 +141,7 @@ y = np.cos(x)
 pl.scatter(x,y)			
 pl.show()
 ```
-### 散佈圖 (Scatter plot)範例二
+# 範例練習三: 散佈圖 (Scatter plot)範例二
 ```
 import matplotlib.pylab as pl
 import numpy as np
