@@ -14,15 +14,12 @@ Bokeh
 Pyga
 Plotly
 ```
-
-
-
 # Google Colab上的範利
 ```
 Charting in Colaboratory
 https://colab.research.google.com/notebooks/charts.ipynb
 ```
-### Line Plots
+### Line Plots折線圖:基本統計圖形
 ```
 import matplotlib.pyplot as plt
  
@@ -110,9 +107,11 @@ s = np.sin(2*np.pi*t)
 
 plt.plot(t, s)
 plt.title(r'$\alpha_i > \beta_i$', fontsize=20)
+
 plt.text(1, -0.6, r'$\sum_{i=0}^\infty x_i$', fontsize=20)
 plt.text(0.6, 0.6, r'$\mathcal{A}\mathrm{sin}(2 \omega t)$',
          fontsize=20)
+         
 plt.xlabel('time (s)')
 plt.ylabel('volts (mV)')
 plt.show()
@@ -121,6 +120,8 @@ plt.show()
 ### 基本統計圖形: 散佈圖 (Scatter plot)  
 ```
 用途:看看資料有何關係??
+```
+```
 https://en.wikipedia.org/wiki/Scatter_plot
 
 散佈圖是一種使用笛卡兒坐標來顯示一組數據的通常兩個變量的值的圖或數學圖。
@@ -129,7 +130,7 @@ https://en.wikipedia.org/wiki/Scatter_plot
 ```
 
 
-### 散佈圖 (Scatter plot)範例
+### 散佈圖 (Scatter plot)範例一
 ```
 import numpy as np
 import pylab as pl
@@ -142,11 +143,146 @@ y = np.cos(x)
 pl.scatter(x,y)			
 pl.show()
 ```
+### 散佈圖 (Scatter plot)範例二
+```
+import matplotlib.pylab as pl
+import numpy as np
+
+# 產生資料
+x = np.random.random(100)
+y = np.random.random(100)
+
+#畫圖
+#pl.scatter(x,y,s=x*500,c=u'r',marker=u'*')	
+pl.scatter(x,y,s=x*500,c=u'b',marker=u'p')	
+pl.show()
+```
 #### matplotlib使用函數:pl.scatter
 ```
 https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html
+有許多參數設定:請參看原始網站
+
+s指大小，c指顏色，marker指符號形狀
+```
+### matplotlib.markers符號形狀
+```
+https://matplotlib.org/api/markers_api.html?highlight=marker
+上網看看如何改變markers
 ```
 
+# 範例練習四:
+```
+import numpy as np
+import pylab as pl
+
+# 產生資料
+x = np.arange(0.0, 2.0*np.pi, 0.01)
+y = np.sin(x)						
+z = np.cos(x)						
+
+#畫圖
+pl.plot(x, y, label='sin()')
+pl.plot(x, z, label='cos()')
+pl.xlabel('x')		
+pl.ylabel('y')
+pl.title('sin-cos') 
+
+
+pl.legend(loc='center')	
+#pl.legend(loc='upper right')	
+#pl.legend()				
+pl.show()
+```
+### matplotlib.pyplot.legend
+```
+語法：legend(*args)
+https://ithelp.ithome.com.tw/articles/10201670
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend
+```
+### 範例練習五:帶有數學公式的圖形
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# 產生資料
+x = np.linspace(0, 2*np.pi, 500)
+y = np.sin(x)
+#z = np.cos(x*x)
+z = np.cos(x*x*x)
+
+
+#畫圖
+plt.figure(figsize=(8,5))
+#標籤前後加上$，代表以內嵌的LaTex引擎顯示為公式
+plt.plot(x,y,label='$sin(x)$',color='red',linewidth=5)	#紅色，2個像素寬
+plt.plot(x,z,'b--',label='$cos(x^2)$')		#b::藍色，--::虛線
+plt.xlabel('Time(s)')
+plt.ylabel('Volt')
+plt.title('Sin and Cos figure using pyplot')
+plt.ylim(-1.2,1.2)
+
+plt.legend()							
+plt.show()
+```
+
+### 範例練習六:多圖合併
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 產生資料
+x= np.linspace(0, 2*np.pi, 500)	
+y1 = np.sin(x)					
+y2 = np.cos(x)
+y3 = np.sin(x*x)
+
+#畫圖
+plt.figure(1)					#建立圖形
+#create three axes
+ax1 = plt.subplot(2,2,1)			#第一列第一行圖形
+ax2 = plt.subplot(2,2,2)			#第一列第二行圖形
+ax3 = plt.subplot(2,1,2)			#第二列
+
+##設定第一張圖
+plt.sca(ax1)					#選擇ax1
+plt.plot(x,y1,color='red')		#繪製紅色曲線
+plt.ylim(-1.2,1.2)				#限制y坐標軸範圍
+
+##設定第二張圖
+plt.sca(ax2)					#選擇ax2
+plt.plot(x,y2,'b--')			#繪製藍色曲線
+plt.ylim(-1.2,1.2)
+
+##設定第三張圖
+plt.sca(ax3)					#選擇ax3
+plt.plot(x,y3,'g--')
+plt.ylim(-1.2,1.2)
+
+##多圖並呈
+plt.show()
+```
+### 範例練習七:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+import mpl_toolkits.mplot3d
+
+
+# 產生資料
+x,y = np.mgrid[-2:2:20j, -2:2:20j]
+z = 50 * np.sin(x+y)		#測試資料
+
+#畫圖
+ax = plt.subplot(111, projection='3d')	#三維圖形
+ax.plot_surface(x,y,z,rstride=2, cstride=1, cmap=plt.cm.Blues_r)
+ax.set_xlabel('X')			#設定坐標軸標籤
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+
+plt.show()
+```
 # 延伸閱讀:推薦的教科書plot.ly
 
 ```
