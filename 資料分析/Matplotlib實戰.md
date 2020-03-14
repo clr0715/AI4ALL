@@ -82,9 +82,14 @@ pl.plot(x,y)
 步驟四:顯示圖形
 pl.show()
 ```
-
-### plot()函數
+### matplotlib.pyplot
 ```
+https://matplotlib.org/api/pyplot_summary.html
+```
+### plot()函數 matplotlib.pyplot.plot
+```
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot
+
 使用plot()函數畫圖
 
 pl.plot(t,s)            #畫圖，以t為橫坐標，s為縱坐標
@@ -93,6 +98,55 @@ pl.ylabel('y')
 pl.title('sin')        #設定圖形標題
 pl.show()                #顯示圖形
 ```
+### plot()函數範例:看看底下產生的數學公式
+```
+https://matplotlib.org/gallery/pyplots/pyplot_mathtext.html#sphx-glr-gallery-pyplots-pyplot-mathtext-py
+```
+```
+import numpy as np
+import matplotlib.pyplot as plt
+t = np.arange(0.0, 2.0, 0.01)
+s = np.sin(2*np.pi*t)
+
+plt.plot(t, s)
+plt.title(r'$\alpha_i > \beta_i$', fontsize=20)
+plt.text(1, -0.6, r'$\sum_{i=0}^\infty x_i$', fontsize=20)
+plt.text(0.6, 0.6, r'$\mathcal{A}\mathrm{sin}(2 \omega t)$',
+         fontsize=20)
+plt.xlabel('time (s)')
+plt.ylabel('volts (mV)')
+plt.show()
+```
+
+### 基本統計圖形: 散佈圖 (Scatter plot)  
+```
+用途:看看資料有何關係??
+https://en.wikipedia.org/wiki/Scatter_plot
+
+散佈圖是一種使用笛卡兒坐標來顯示一組數據的通常兩個變量的值的圖或數學圖。
+如果對點進行了編碼，則可以顯示一個附加變量。
+數據顯示為點的集合，每個點具有確定水平軸上位置的一個變量的值和確定垂直軸上位置的另一個變量的值。
+```
+
+
+### 散佈圖 (Scatter plot)範例
+```
+import numpy as np
+import pylab as pl
+
+# 產生資料
+x = np.arange(0, 2.0*np.pi, 0.2)
+y = np.cos(x)
+
+#畫圖
+pl.scatter(x,y)			
+pl.show()
+```
+#### matplotlib使用函數:pl.scatter
+```
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html
+```
+
 # 延伸閱讀:推薦的教科書plot.ly
 
 ```
