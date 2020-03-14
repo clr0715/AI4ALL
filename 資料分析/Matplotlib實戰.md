@@ -16,9 +16,7 @@ Plotly
 ```
 
 
-```
 
-```
 # Google Colab上的範利
 ```
 Charting in Colaboratory
@@ -49,6 +47,24 @@ plt.show()
 使用指南  https://matplotlib.org/users/index.html
 
 學習指南(Tutorials) https://matplotlib.org/tutorials/index.html
+```
+## MATPLOTLIB範例一
+```
+import numpy as np
+import pylab as pl
+
+
+# 產生資料
+x = np.arange(0.0, 2.0*np.pi, 0.01)	
+y = np.sin(x)			
+
+#畫圖
+
+pl.plot(x,y)		
+pl.xlabel('xㄒ')			
+pl.ylabel('y')
+pl.title('sin')		
+pl.show()
 ```
 # 延伸閱讀:推薦的教科書plot.ly
 
