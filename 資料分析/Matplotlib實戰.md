@@ -61,7 +61,7 @@ y = np.sin(x)
 #畫圖
 
 pl.plot(x,y)		
-pl.xlabel('xㄒ')			
+pl.xlabel('x')			
 pl.ylabel('y')
 pl.title('sin')		
 pl.show()
