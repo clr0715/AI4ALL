@@ -82,6 +82,17 @@ pl.plot(x,y)
 步驟四:顯示圖形
 pl.show()
 ```
+
+### plot()函數
+```
+使用plot()函數畫圖
+
+pl.plot(t,s)            #畫圖，以t為橫坐標，s為縱坐標
+pl.xlabel('x')            #設定坐標軸標籤
+pl.ylabel('y')
+pl.title('sin')        #設定圖形標題
+pl.show()                #顯示圖形
+```
 # 延伸閱讀:推薦的教科書plot.ly
 
 ```
