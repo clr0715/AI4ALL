@@ -45,7 +45,7 @@ print("2020年3月PyTorch version最新版本 是1.4 請參閱https://pytorch.or
 ## NUMPY
 
 ### NUMPY ndarray(N-Dimensional Arrays)
-### NUMPY ndarray(N-Dimensional Arrays)重要屬性
+### NUMPY ndarray(N-Dimensional Arrays)重要屬性:shape dimension
 ```
 shape
 dimension
@@ -73,33 +73,12 @@ intf_ar
 ```
 1.使用Python內建的array()建立陣列
 2.使用numpy提供的創建函數建立陣列
-3.直接生成使用genfromtxt()方法建立陣列
+3.直接生成==>使用genfromtxt()方法建立陣列
 ```
 ## 1.使用Python內建的array()建立陣列
 ```
 import numpy as np
 x = np.array([[1,2.0],[0,0],(1+1j,3.)])
-```
-
-
-
-
-## 3.直接生成使用genfromtxt()方法建立陣列
-
-```
-import csv
-import numpy as np
-
-x = '''1,3,2,3,1,2,3,4
-2,4,5,0.6,5,6,7,8
-3,7,8,9,9,10,11,12
-4,1,1.1,1.2,13,14,15,16
-'''
-with open("abc.txt",mode="w",encoding="utf-8") as file:
-  file.write(x)
-file.close()
-
-np.genfromtxt('abc.txt', delimiter=',', invalid_raise = False)
 ```
 ## 2.使用numpy提供的創建函數建立陣列
 ```
@@ -176,6 +155,25 @@ import numpy as np
 a = np.array([0, 1, 2])
 np.tile(a, (2, 1, 2))
 ```
+
+## 3.直接生成使用genfromtxt()方法建立陣列
+
+```
+import csv
+import numpy as np
+
+x = '''1,3,2,3,1,2,3,4
+2,4,5,0.6,5,6,7,8
+3,7,8,9,9,10,11,12
+4,1,1.1,1.2,13,14,15,16
+'''
+with open("abc.txt",mode="w",encoding="utf-8") as file:
+  file.write(x)
+file.close()
+
+np.genfromtxt('abc.txt', delimiter=',', invalid_raise = False)
+```
+
 ### 下列程式執行後的結果為何?
 ```
 import numpy as np
@@ -199,14 +197,13 @@ import numpy as np
 np.tile(np.array([[1,2],[6,7]]),(2,2))
 ```
 ### NUMPY ndarray 運算(Array shape manipulation)
-### NUMPY ndarray 運算(Array shape manipulation)重要屬性
 ```
 reshape
 ravel()
 T
 newaxis
 ```
-###
+### reshape
 ```
 import numpy as np
 x = np.arange(2,10).reshape(2,4)
@@ -217,6 +214,8 @@ import numpy as np
 y = np.arange(2,10).reshape(4,2)
 y
 ```
+
+### ravel
 ```
 import numpy as np
 ar=np.array([np.arange(1,6),np.arange(10,15)]); 
@@ -227,11 +226,13 @@ import numpy as np
 ar=np.array([np.arange(1,6),np.arange(10,15)])
 ar.ravel()
 ```
+### T
 ```
 import numpy as np
 ar=np.array([np.arange(1,6),np.arange(10,15)])
 ar.T
 ```
+### newaxis
 ```
 import numpy as np
 ar=ar[:, np.newaxis]; ar.shape
@@ -283,7 +284,7 @@ ar=2*np.arange(6)
 # ar
 ar[:4]
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 ar = np.array([[2,3,4],[9,8,7],[11,12,13]])
@@ -322,7 +323,7 @@ ar=2*np.arange(6)
 ar[2:]=np.ones(4)
 ar
 ```
-## NUMPY ndarray(N-Dimensional Arrays) Reduction Operations
+##  Reduction 運算
 ```
 prod()
 sum()
@@ -349,7 +350,7 @@ import numpy as np
 ar=np.array([[2,3,4],[5,6,7],[8,9,10]])
 np.median(ar)
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 ar=np.array([np.arange(1,6),np.arange(1,6)])
 # ar
@@ -360,29 +361,32 @@ ar=np.array([np.arange(1,6),np.arange(1,6)])
 # ar
 np.prod(ar,axis=1)
 ```
-## NUMPY ndarray 運算 Universal Functions:Fast Element-Wise Array Functions
+## Universal Functions:Fast Element-Wise Array Functions
 ```
 sqrt
 exp
 ```
+### sqrt
 ```
 import numpy as np
 arr = np.arange(10)
 np.sqrt(arr)
 ```
+### exp
 ```
 import numpy as np
 arr = np.arange(10)
 np.exp(arr)
 ```
 ## NUMPY ndarray 運算(A矩陣與B矩陣間的運算)
-
+### 加法運算
 ```
 import numpy as np
 arr = np.array([[1., 2., 3.], [4., 5., 6.]])
 # arr
 arr+arr
 ```
+### 乘法運算
 ```
 import numpy as np
 arr = np.array([[1., 2., 3.], [4., 5., 6.]])
@@ -395,13 +399,14 @@ ar=np.array([[1,1],[1,1]])
 ar2=np.array([[2,2],[2,2]])
 ar*ar2
 ```
+### dot運算
 ```
 import numpy as np
 ar=np.array([[1,1],[1,1]])
 ar2=np.array([[2,2],[2,2]])
 ar.dot(ar2)
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 arr = np.array([[1., 2., 3.], [4., 5., 6.]])
@@ -455,7 +460,7 @@ np.arange(3) + 5
 import numpy as np
 np.ones((3, 3)) + np.arange(3)
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 np.arange(3).reshape((3, 1)) + np.arange(3)
@@ -494,7 +499,7 @@ np.random.seed(0)
 x3 = np.random.randint(10, size=(3, 4, 5))
 x3
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 np.random.randint(1,size=5)
@@ -517,7 +522,7 @@ np.convolve([1,2,3],[0,1,0.5], 'same')
 import numpy as np
 np.convolve([1,2,3],[0,1,0.5], 'valid')
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 np.convolve([1, 2, 3], [0, 1, 0.5])
@@ -543,7 +548,7 @@ ar=np.array([[3,2],[10,-1]])
 ar.sort(axis=1)
 ar
 ```
-### 下列程式執行後的結果為何?
+### [小測驗]下列程式執行後的結果為何?
 ```
 import numpy as np
 ar=np.array([[3,2],[10,-1]])
@@ -558,4 +563,3 @@ ar.sort()
 ar[::-1]
 ```
 
-```
