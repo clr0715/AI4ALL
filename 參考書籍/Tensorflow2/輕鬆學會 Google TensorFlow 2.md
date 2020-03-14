@@ -3,6 +3,8 @@
 輕鬆學會 Google TensorFlow 2.0 人工智慧深度學習實作開發, 2/e
 黃士嘉、林邑撰 著  博碩文化 2020-02-05
 https://www.tenlong.com.tw/products/9789864344635?list_name=srh
+
+https://github.com/taipeitechmmslab/MMSLAB-TF2
 ```
 ```
 |CHAPTER 00| 環境安裝
