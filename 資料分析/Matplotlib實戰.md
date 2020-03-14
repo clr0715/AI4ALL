@@ -1,4 +1,4 @@
-# Data Visualization資料視覺化
+# Data Visualization資料視覺化
 ```
 藉助於圖形化手段，
 清晰有效地傳達與溝通訊息
@@ -40,10 +40,90 @@ plt.ylabel("y axis")
 plt.title("Line Graph Example")
 plt.legend()
 plt.show()
-
-```
-# 延伸閱讀:推薦的教科書
-
 ```
 
+# MATPLOTLIB
+```
+官方網址 https://matplotlib.org/
+
+使用指南  https://matplotlib.org/users/index.html
+
+學習指南(Tutorials) https://matplotlib.org/tutorials/index.html
+```
+# 延伸閱讀:推薦的教科書plot.ly
+
+```
+官方網址https://plot.ly/看看互動式資料視覺化成果
+```
+```
+Python數據分析：基於Plotly的動態可視化繪圖
+作者： 孫洋洋, 王碩, 邢夢來, 袁泉, 吳娜
+電子工業出版社
+https://github.com/sunshe35/PythonPlotlyCodes
+```
+
+### 延伸閱讀:書bokeh
+```
+官方網址  https://bokeh.pydata.org/en/latest/
+!pip install bokeh
+
+```
+```
+import numpy as np
+from bokeh.plotting import figure, show
+from bokeh.io import output_notebook
+
+N = 4000
+
+x = np.random.random(size=N) * 100
+y = np.random.random(size=N) * 100
+radii = np.random.random(size=N) * 1.5
+colors = ["#%02x%02x%02x" % (r, g, 150) for r, g in zip(np.floor(50+2*x).astype(int), np.floor(30+2*y).astype(int))]
+
+output_notebook()
+p = figure()
+p.circle(x, y, radius=radii, fill_color=colors, fill_alpha=0.6, line_color=None)
+show(p)
+```
+
+## 延伸閱讀: seaborn
+```
+範例學習1:
+https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/04.14-Visualization-With-Seaborn.ipynb
+```
+```
+範例學習2:
+https://colab.research.google.com/drive/1o6MijFkNHiTPeS8Y5n59j2cH4-Mf2wX3
+```
+```
+import seaborn as sns
+sns.set(style="ticks")
+
+# Load the example dataset for Anscombe's quartet
+df = sns.load_dataset("anscombe")
+
+# Show the results of a linear regression within each dataset
+sns.lmplot(x="x", y="y", col="dataset", hue="dataset", data=df,
+           col_wrap=2, ci=None, palette="muted", height=4,
+           scatter_kws={"s": 50, "alpha": 1});
+```
+```
+https://www.data-insights.cn/?p=179
+```
+
+## 延伸閱讀:  altair
+```
+官方網址https://altair-viz.github.io/ 
+
+```
+```
+import altair as alt
+from vega_datasets import data
+cars = data.cars()
+
+alt.Chart(cars).mark_point().encode(
+    x='Horsepower',
+    y='Miles_per_Gallon',
+    color='Origin',
+).interactive()
 ```
