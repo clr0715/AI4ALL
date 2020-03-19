@@ -196,7 +196,7 @@ https://matplotlib.org/api/markers_api.html?highlight=marker
 上網看看如何改變markers
 ```
 
-# 範例練習四:
+# 範例練習四:matplotlib.pyplot.legend的用處
 ```
 import numpy as np
 import pylab as pl
@@ -216,6 +216,7 @@ pl.title('sin-cos')
 
 pl.legend(loc='center')	
 #pl.legend(loc='upper right')	
+#pl.legend(loc='upper right')
 #pl.legend()				
 pl.show()
 ```
