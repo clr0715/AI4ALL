@@ -37,6 +37,11 @@ plt.legend()
 plt.show()
 ```
 
+### [隋棠小測驗]Line Plots折線圖:基本統計圖形
+```
+顏色改成紅色
+線條改成虛線
+```
 # 4.MATPLOTLIB
 ```
 官方網址 https://matplotlib.org/
