@@ -91,6 +91,14 @@ pl.show()
 ```
 https://matplotlib.org/api/pyplot_summary.html
 ```
+```
+matplotlib.pyplot模組有許多基本統計圖形的函數
+plot():
+hist():直方圖(histogram):matplotlib.pyplot.hist
+
+參考: https://colab.research.google.com/notebooks/charts.ipynb
+```
+
 ### plot()函數 matplotlib.pyplot.plot
 ```
 https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot
