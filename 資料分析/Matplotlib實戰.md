@@ -165,6 +165,10 @@ y = np.cos(x)
 pl.scatter(x,y)			
 pl.show()
 ```
+```
+改成底下公式:
+y = np.exp(x)*np.cos(x)
+```
 # 範例練習三: 散佈圖 (Scatter plot)範例二
 ```
 import matplotlib.pylab as pl
