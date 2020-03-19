@@ -1,3 +1,8 @@
+# Github使用的語法:Markdown
+```
+Markdown文件
+https://markdown.tw/
+```
 # 人工智慧學習資源
 ```
 高雄市資訊培育協會: Google Cloud AI人工智慧與機器學習應用班
