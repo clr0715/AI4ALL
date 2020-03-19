@@ -42,6 +42,9 @@ plt.show()
 顏色改成紅色
 線條改成虛線
 ```
+```
+plt.plot(x, y1,'r--',label="line L")
+```
 # 4.MATPLOTLIB
 ```
 官方網址 https://matplotlib.org/
