@@ -103,6 +103,14 @@ pl.ylabel('y')
 pl.title('sin')        #設定圖形標題
 pl.show()                #顯示圖形
 ```
+### 作業:完成底下的boxplot箱形圖 (Box plot):使用matplotlib.pyplot.boxplot
+
+```
+某高中身高
+            178   164  159  162  182  
+             179   166  168  173  165
+http://estat.ncku.edu.tw/topic/graph_stat/base/BoxPlot.html
+```
 ### plot()函數範例:看看底下產生的數學公式
 ```
 https://matplotlib.org/gallery/pyplots/pyplot_mathtext.html#sphx-glr-gallery-pyplots-pyplot-mathtext-py
