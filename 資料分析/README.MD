@@ -30,3 +30,8 @@ https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_c
 ```
 https://github.com/globalcitizen/2019-wuhan-coronavirus-data
 ```
+
+# 隨堂作業
+```
+numpy技術報告: 使用numpy.linspace產生陣列的各種技術
+```
