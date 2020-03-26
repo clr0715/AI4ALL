@@ -32,6 +32,22 @@ https://github.com/globalcitizen/2019-wuhan-coronavirus-data
 ```
 
 # 隨堂作業
+### numpy隨堂作業
 ```
 numpy技術報告: 使用numpy.linspace產生陣列的各種技術
+```
+### pandas隨堂作業
+```
+pandas-datareader的各種技術
+emote Data Access
+
+https://stackoverflow.com/questions/48895501/python-pulling-from-google-finance-with-pandas
+
+https://www.learndatasci.com/tutorials/python-finance-part-yahoo-finance-api-pandas-matplotlib/
+```
+
+```
+Python for Financial Analysis and Algorithmic Trading
+Learn numpy , pandas , matplotlib , quantopian , finance , and more for algorithmic trading with Python!
+
 ```
