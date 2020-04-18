@@ -1,3 +1,10 @@
+# 學生專案 AIOT實作
+```
+AIOT開發平台
+三大 AI 開發板：Nvidia Jetson Nano、Coral Google Edge TPU、Intel（Movidius）Neural Compute Stick 2
+https://makerpro.cc/2019/05/is-nvidia-jetson-nano-better-than-google-edge-tpu/
+```
+
 # Github使用的語法:Markdown
 ```
 Markdown文件
